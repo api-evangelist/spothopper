@@ -1,7 +1,17 @@
 aid: spothopper
 name: SpotHopper
-description: 'SpotHopper is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'SpotHopper is a Milwaukee, Wisconsin based restaurant marketing and web
+  technology company, founded in 2015, selling an all-in-one, AI-assisted platform to
+  independent restaurants and multi-location restaurant groups. The platform bundles
+  restaurant website design and hosting (customer sites are served from the spotapps.co
+  domain), SEO and Google Business Profile syncing, menu / specials / event publishing,
+  automated social posting to Facebook and Instagram, email and SMS campaigns, review
+  generation and reputation management, and link-outs to reservation and ordering
+  partners such as OpenTable, Yelp and UberEats. The company markets itself as powering
+  more than 20,000 restaurants. As of the 2026-08-29 enrichment probe SpotHopper
+  publishes no developer portal, no API reference, and no machine-readable API contract
+  on any host it controls.'
+image: https://spothopper-static.s3.us-east-1.amazonaws.com/assets/landing-page/meta-default.jpg
 url: https://raw.githubusercontent.com/api-evangelist/spothopper/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +22,16 @@ created: '2026-08-29'
 modified: '2026-08-29'
 tags:
 - Company
+- Restaurants
+- Hospitality
+- Marketing
+- Websites
+- SEO
+- Reviews
+- Social Media
+- Email Marketing
+- SMS
+- Small Business
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +39,57 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/spothopper-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/spothopper_stock/
+  url: https://www.spothopperapp.com/
+- type: Blog
+  url: https://www.spothopperapp.com/blog
+- type: Support
+  url: https://www.spothopperapp.com/contact-us
+- type: TermsOfService
+  url: https://www.spothopperapp.com/legal/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.spothopperapp.com/legal/privacy-policy
+- type: GitHubOrganization
+  url: https://github.com/SpotHopperLLC
+- type: LinkedIn
+  url: https://www.linkedin.com/company/spothopper/
+- type: Facebook
+  url: https://www.facebook.com/spothopperapp/
+- type: Instagram
+  url: https://www.instagram.com/spothopper_official/
+- type: LLMsTxt
+  url: llms/spothopper-llms.txt
+- type: Plans
+  url: plans/spothopper-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/spothopper-rate-limits.yml
+x-enrichment:
+  date: '2026-08-29'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    SpotHopper ships its restaurant marketing platform only as an end-user
+    product — its own FAQ says guests are linked out to OpenTable, Yelp and
+    UberEats with "no integrations needed" — and there is no developer page,
+    API reference or spec on any host it controls: www.spothopperapp.com and
+    api.spotapps.co (which, despite the "api." label, resolves to the same
+    34.194.50.185 marketing application) answer every spec path with the
+    171,924-byte single-page-application homepage, while /api returns a hard 404.
+  evidence:
+  - url: https://www.spothopperapp.com/api
+    status: 404
+  - url: https://api.spotapps.co/api/v1
+    status: 404
+  - url: https://api.spotapps.co/openapi.json
+    status: 200
+  - url: https://www.spothopperapp.com/developers
+    status: 200
+  - url: https://www.spothopperapp.com/faq
+    status: 200
+  checked: '2026-08-29'

@@ -1,0 +1,24 @@
+generated: '2026-08-29'
+method: searched
+source: https://www.spothopperapp.com/faq
+plan_count: 0
+plans: []
+note: >-
+  SpotHopper publishes no pricing page and no named plans. The site has no
+  /pricing or /plans route (both fall through to the single-page-application
+  catch-all, HTTP 200 with the 171,924-byte marketing homepage) and no pricing
+  URL appears in https://www.spothopperapp.com/sitemap.xml. The only public
+  statement about cost is on the FAQ page: "flexible pricing designed for
+  independent restaurant owners and multi-location groups alike", with no
+  figures, tiers, quotas or overage terms. Pricing is quoted through the
+  demo/sales flow at https://www.spothopperapp.com/free-demo. There is no API
+  product, so there is no API plan to record either.
+evidence:
+- url: https://www.spothopperapp.com/faq
+  status: 200
+- url: https://www.spothopperapp.com/pricing
+  status: 200
+  note: soft-404 — SPA catch-all, not a pricing page
+- url: https://www.spothopperapp.com/sitemap.xml
+  status: 200
+  note: 31 URLs, none pricing-related

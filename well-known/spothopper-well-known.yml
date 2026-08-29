@@ -1,0 +1,84 @@
+generated: '2026-08-29'
+method: probed
+source: live GET probes of /.well-known/* on every host SpotHopper controls
+note: >-
+  NO DOCUMENT WAS SERVED. Both SpotHopper hosts are catch-all single-page
+  applications: every path returns HTTP 200 with the identical 171,924-byte
+  marketing homepage, including a deliberately nonsense control path. The 200s
+  below are therefore soft-404s, not documents, and NO WellKnown or SecurityTxt
+  pointer is emitted for this provider. api.spotapps.co resolves to the same
+  address as the spothopperapp.com apex (34.194.50.185) and serves the same
+  application; despite the "api." label it is not an API host.
+hit_count: 0
+hosts:
+- host: https://www.spothopperapp.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: soft-404 — 171924-byte HTML homepage, byte-identical to the control probe
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: soft-404 — 171924-byte HTML homepage
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: soft-404 — 171924-byte HTML homepage
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    note: soft-404 — 171924-byte HTML homepage
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    note: soft-404 — 171924-byte HTML homepage
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    note: soft-404 — 171924-byte HTML homepage; rejected per the A2A probe rules
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    note: soft-404 — 171924-byte HTML homepage; rejected per the A2A probe rules
+- host: https://api.spotapps.co
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: soft-404 — same 171924-byte HTML homepage
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: soft-404 — same 171924-byte HTML homepage
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: soft-404 — same 171924-byte HTML homepage
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    note: soft-404 — same 171924-byte HTML homepage
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    note: soft-404 — same 171924-byte HTML homepage
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    note: soft-404 — same 171924-byte HTML homepage; rejected
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    note: soft-404 — same 171924-byte HTML homepage; rejected
+soft_404_control:
+- host: https://www.spothopperapp.com
+  path: /this-path-should-not-exist-xyz123
+  status: 200
+  bytes: 171924
+  content_type: text/html;charset=utf-8
+- host: https://api.spotapps.co
+  path: /this-path-should-not-exist-xyz123
+  status: 200
+  bytes: 171924
+  content_type: text/html;charset=utf-8

@@ -1,0 +1,22 @@
+generated: '2026-08-29'
+method: searched
+source: https://www.spothopperapp.com/
+limit_count: 0
+rate_limits: []
+note: >-
+  No rate limits are documented because SpotHopper publishes no public API.
+  Contract discovery on 2026-08-29 probed www.spothopperapp.com and
+  api.spotapps.co for /openapi.json, /openapi.yaml, /swagger.json,
+  /swagger/v1/swagger.json, /v1/openapi.json, /api-docs, /docs, /redoc,
+  /apidocs and /graphql; every one returned the SPA catch-all homepage, while
+  /api and /api/v1 returned a hard HTTP 404. There is no developer portal, no
+  API reference, no published response headers and no documented status code on
+  exhaustion.
+evidence:
+- url: https://www.spothopperapp.com/api
+  status: 404
+- url: https://api.spotapps.co/api/v1
+  status: 404
+- url: https://www.spothopperapp.com/developers
+  status: 200
+  note: soft-404 — SPA catch-all, not a developer page

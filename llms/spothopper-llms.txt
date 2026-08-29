@@ -1,0 +1,43 @@
+# SpotHopper
+
+> SpotHopper is a Milwaukee, Wisconsin restaurant marketing and web technology company, founded in 2015, selling an all-in-one AI-assisted platform to independent restaurants and multi-location groups: website design and hosting, SEO and Google Business Profile syncing, menu/specials/event publishing, automated social posting, email and SMS campaigns, review generation, and link-outs to reservation and ordering partners. SpotHopper publishes NO public API, NO developer portal and NO machine-readable contract; there is nothing here for an agent to call.
+
+Generated 2026-08-29 by the API Evangelist enrichment pipeline from apis.yml and this repo's probe artifacts. SpotHopper does not publish its own /llms.txt (https://www.spothopperapp.com/llms.txt returns the single-page-application catch-all homepage, HTTP 200, 171,924 bytes — a soft-404, not a document).
+
+## APIs
+
+- No public API. Contract discovery on 2026-08-29 probed www.spothopperapp.com and api.spotapps.co for /openapi.json, /openapi.yaml, /swagger.json, /swagger/v1/swagger.json, /v1/openapi.json, /api-docs, /docs, /redoc, /apidocs and /graphql. Every path returned the marketing homepage; /api and /api/v1 returned a hard HTTP 404. No GraphQL, MCP, A2A agent card, gRPC or WSDL surface was found.
+- Despite its name, https://api.spotapps.co is not an API host — it resolves to the same address as the spothopperapp.com apex (34.194.50.185) and serves the same marketing application. spotapps.co is the domain SpotHopper serves customer restaurant websites from.
+- Integration posture, in SpotHopper's own words on its FAQ: the platform "automatically syncs your website and menu with Google" and links out "to platforms like OpenTable, Yelp, and UberEats, so guests can make reservations or place orders directly — no integrations needed."
+
+## Company
+
+- Website: https://www.spothopperapp.com/
+- About: https://www.spothopperapp.com/about-us
+- How it works: https://www.spothopperapp.com/how-it-works
+- FAQ: https://www.spothopperapp.com/faq
+- Customer reviews: https://www.spothopperapp.com/reviews
+- Careers: https://www.spothopperapp.com/careers
+- Blog: https://www.spothopperapp.com/blog
+
+## Contact and legal
+
+- Contact / support: https://www.spothopperapp.com/contact-us
+- Request a demo: https://www.spothopperapp.com/free-demo
+- Terms of Service: https://www.spothopperapp.com/legal/terms-of-service
+- Privacy Policy: https://www.spothopperapp.com/legal/privacy-policy
+
+## Code and social
+
+- GitHub organization: https://github.com/SpotHopperLLC — 14 public repositories, almost all forks of third-party OSS libraries; the two "SpotHopper-OpenSource" repositories (iOS, Android) contain only a README and a LICENSE and were last pushed in 2014. No first-party SDK is published to npm, PyPI, RubyGems, Maven Central, NuGet, crates.io or pkg.go.dev.
+- LinkedIn: https://www.linkedin.com/company/spothopper/
+- Instagram: https://www.instagram.com/spothopper_official/
+- Facebook: https://www.facebook.com/spothopperapp/
+
+## Repository artifacts
+
+- apis.yml: https://raw.githubusercontent.com/api-evangelist/spothopper/refs/heads/main/apis.yml
+- Well-known probe (records the catch-all, zero documents served): well-known/spothopper-well-known.yml
+- Domain security probe: security/spothopper-domain-security.yml
+- Plans / pricing (none published): plans/spothopper-plans-pricing.yml
+- Rate limits (none published): rate-limits/spothopper-rate-limits.yml
