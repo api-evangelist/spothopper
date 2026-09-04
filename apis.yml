@@ -11,6 +11,19 @@ description: 'SpotHopper is a Milwaukee, Wisconsin based restaurant marketing an
   more than 20,000 restaurants. As of the 2026-08-29 enrichment probe SpotHopper
   publishes no developer portal, no API reference, and no machine-readable API contract
   on any host it controls.'
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - rate-limits
+  - security
+  generated: '2026-09-02'
+  method: derived
 image: https://spothopper-static.s3.us-east-1.amazonaws.com/assets/landing-page/meta-default.jpg
 url: https://raw.githubusercontent.com/api-evangelist/spothopper/refs/heads/main/apis.yml
 x-type: company
